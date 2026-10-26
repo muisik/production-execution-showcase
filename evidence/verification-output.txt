@@ -1,0 +1,11 @@
+Selected stdout lines from the canonical local verification; expected refusal-case logs and private filesystem paths are omitted.
+
+183 files would be left unchanged.
+System check identified no issues (0 silenced).
+Ran 321 tests in 251.344s
+OK (skipped=10)
+Found 322 test(s).
+System check identified no issues (0 silenced).
+System check identified no issues (0 silenced).
+Summary: 0 error(s), 0 warning(s)
+PASS  Project memory and code trace contract is valid

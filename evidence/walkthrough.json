@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "classification": "real browser actions against a synthetic local fixture",
+  "source_checkpoint": "91693bdca2bd8a5b3742527b8f49e19cc1d57b1d",
+  "execution_date": "2026-10-23",
+  "passport_capture_date": "2026-10-26",
+  "environment": {
+    "database": "fresh fixture-owned SQLite database",
+    "network": "loopback development server",
+    "seed": "bootstrap_demo",
+    "accounts": "synthetic manager and qualified operator",
+    "customer_database_or_media_used": false,
+    "commercial_license_enforcement_exercised": false
+  },
+  "setup": {
+    "order": "DEMO-WO-001",
+    "unit": "DEMO-100-2026-00001",
+    "process_revision": 1,
+    "dependencies": ["B -> C", "C -> D"],
+    "note": "Order creation, publication and assignment are bootstrap setup, not browser-authored evidence. Synthetic SOP titles are illustrative, not compliance or customer-procedure evidence."
+  },
+  "observed_actions": [
+    {"action": "Manager opened the management overview", "screenshot": "../screenshots/01-management.jpg"},
+    {"action": "Manager inspected the published workflow and controlled step definitions", "screenshot": "../screenshots/02-process.jpg"},
+    {"action": "Qualified operator opened the assigned work package and expanded its instruction", "screenshot": "../screenshots/03-operator-task.jpg"},
+    {"action": "Operator started B, selected DEMO-ANA and completed assembly with PASS", "outcome": "One material movement of -2 DEMO-MAT-001 and one genealogy component of quantity 2; C became available"},
+    {"action": "Operator started C, entered voltage_v=27 and current_ma=55, then requested PASS", "screenshot": "../screenshots/04-quality-gate.jpg", "outcome": "The 23.5..24.5 V contract overrode requested PASS to FAIL"},
+    {"action": "Operator inspected the recorded result and remaining task", "screenshot": "../screenshots/05-execution-history.jpg", "outcome": "B PASSED, C FAILED, D BLOCKED; no start control for D; work package blocked"},
+    {"action": "Manager opened the quality passport", "screenshot": "../screenshots/06-quality-passport.jpg", "outcome": "Unit HOLD; preserved PASS/FAIL attempts, recorded current, failure reason and material genealogy visible"}
+  ],
+  "observed_invariants": [
+    "Passed assembly unlocks its inspection prerequisite",
+    "A requested PASS cannot override an out-of-tolerance mandatory input",
+    "A failed prerequisite leaves downstream work unstarted and blocked",
+    "Material consumption and genealogy remain linked to the successful assembly attempt",
+    "The failed initial result remains visible in execution history and the passport"
+  ],
+  "measurement_boundary": "At this checkpoint the rejected 27 V is retained in the failure note, not as a structured voltage_v measurement. The structured accepted current_ma is 55.000000. This evidence does not claim complete structured retention of rejected input values.",
+  "not_exercised": [
+    "Browser-based first setup, process publication or order creation",
+    "Authorized correction, retest or final unit completion",
+    "PostgreSQL concurrency or appliance/LAN capacity",
+    "Physical devices, camera provenance, commercial licensing or live ERP",
+    "Customer field acceptance, commissioning or certification"
+  ],
+  "animation": {
+    "file": "../screenshots/production-execution-tour.gif",
+    "kind": "six actual screenshot stills, resized/padded to a common canvas; full passport available separately",
+    "continuous_recording": false
+  }
+}

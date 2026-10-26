@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "verified_at_utc": "2026-10-26T05:43:18.713721+00:00",
+  "source_checkpoint": "91693bdca2bd8a5b3742527b8f49e19cc1d57b1d",
+  "scope": "Captured application checkpoint on an isolated showcase branch; no application runtime edits in the showcase change.",
+  "environment": {
+    "os": "Windows",
+    "python": "3.12.14",
+    "database": "fixture-owned SQLite",
+    "Django": "5.2.18",
+    "djangorestframework": "3.17.2",
+    "drf-spectacular": "0.30.0"
+  },
+  "canonical_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-windows.ps1",
+  "canonical_result": "PASS",
+  "stages": [
+    "Python compilation",
+    "Black format check",
+    "Flake8",
+    "Django system check",
+    "API contract check",
+    "Static collection",
+    "Migration drift check",
+    "Fresh database migrations",
+    "Django application suite",
+    "Strict ContextRail validation"
+  ],
+  "test_runner": {
+    "discovered": 322,
+    "reported_run": 321,
+    "duration_seconds": 251.344,
+    "skipped": 10,
+    "failures": 0,
+    "errors": 0,
+    "skip_boundary": "PostgreSQL locking/concurrency and explicitly opted-in capacity profiles are not established by this SQLite run."
+  },
+  "public_payload_checks": [
+    "Relative file links",
+    "Six actual screenshots and six-frame GIF",
+    "UTF-8 integrity",
+    "File-type allowlist and no symlinks",
+    "Bounded credential/path/customer-name scan",
+    "SHA-256 manifest",
+    "Reviewed YAML publication boundary"
+  ],
+  "environment_repairs": [
+    "An independent virtual environment was installed from this checkpoint requirements; the other worktree environment was not changed.",
+    "The OpenAPI file was normalized from CRLF to LF in this worktree; normalized content equals the committed artifact. No API schema change.",
+    "An initial run passed application tests but strict validation rejected the new trace comment format; the comment was corrected and the complete canonical command rerun."
+  ],
+  "not_verified": [
+    "PostgreSQL locking and concurrent load",
+    "Physical appliance or factory LAN",
+    "Live customer/field acceptance",
+    "Real ERP acknowledgement or device hardware",
+    "Commercial license enforcement in the DEBUG browser fixture",
+    "Target repository token write permission and public synchronization (checked by publication separately)"
+  ],
+  "maintainer_report": {
+    "existing_database_dogfood": "Reported successful by the maintainer; not repeated against that database in this showcase run."
+  },
+  "publication": "Local verification only; successful publication requires a separate Actions run and exact Git blob comparison."
+}

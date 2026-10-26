@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "data_classification": "synthetic fixture; no operational/customer database",
+  "source_checkpoint": "91693bdca2bd8a5b3742527b8f49e19cc1d57b1d",
+  "exported_at_utc": "2026-10-26T05:32:43.413895+00:00",
+  "order": [
+    {
+      "number": "DEMO-WO-001",
+      "quantity": 1,
+      "tracking_mode": "SERIAL",
+      "state": "RELEASED"
+    }
+  ],
+  "units": [
+    {
+      "identity": "DEMO-100-2026-00001",
+      "quantity": 1,
+      "state": "HOLD",
+      "completion_revision": 0
+    }
+  ],
+  "executions": [
+    {
+      "code": "B",
+      "state": "PASSED",
+      "result": "PASS",
+      "result_note": "Sentetik vitrin senaryosu: montaj tamamlandı, iki bağlantı elemanı DEMO-ANA kaynağından sarf edildi.",
+      "measurements": {},
+      "started_at": "2026-10-23 13:40:46.848295",
+      "completed_at": "2026-10-23 13:40:55.945481"
+    },
+    {
+      "code": "C",
+      "state": "FAILED",
+      "result": "FAIL",
+      "result_note": "Sentetik kalite denemesi: 27 V tolerans dışı; kalite kapısının ilerlemeyi durdurması bekleniyor. [GİRDİ SÖZLEŞMESİ: Besleme Gerilimi: 27 V maksimum 24.500000000000 üstünde.]",
+      "measurements": {
+        "current_ma": "55.000000"
+      },
+      "started_at": "2026-10-23 13:41:08.877612",
+      "completed_at": "2026-10-23 13:41:24.464798"
+    },
+    {
+      "code": "D",
+      "state": "BLOCKED",
+      "result": "",
+      "result_note": "",
+      "measurements": {},
+      "started_at": null,
+      "completed_at": null
+    }
+  ],
+  "attempts": [
+    {
+      "code": "B",
+      "sequence": 1,
+      "kind": "INITIAL_RESULT",
+      "state": "PASSED",
+      "result": "PASS",
+      "result_note": "Sentetik vitrin senaryosu: montaj tamamlandı, iki bağlantı elemanı DEMO-ANA kaynağından sarf edildi.",
+      "measurements": {},
+      "reason": "",
+      "started_at": "2026-10-23 13:40:46.848295",
+      "completed_at": "2026-10-23 13:40:55.945481",
+      "created_at": "2026-10-23 13:40:55.945481"
+    },
+    {
+      "code": "C",
+      "sequence": 1,
+      "kind": "INITIAL_RESULT",
+      "state": "FAILED",
+      "result": "FAIL",
+      "result_note": "Sentetik kalite denemesi: 27 V tolerans dışı; kalite kapısının ilerlemeyi durdurması bekleniyor. [GİRDİ SÖZLEŞMESİ: Besleme Gerilimi: 27 V maksimum 24.500000000000 üstünde.]",
+      "measurements": {
+        "current_ma": "55.000000"
+      },
+      "reason": "",
+      "started_at": "2026-10-23 13:41:08.877612",
+      "completed_at": "2026-10-23 13:41:24.464798",
+      "created_at": "2026-10-23 13:41:24.477446"
+    }
+  ],
+  "events": [
+    {
+      "code": "B",
+      "event_type": "STARTED",
+      "result": "",
+      "note": "",
+      "created_at": "2026-10-23 13:40:46.848295"
+    },
+    {
+      "code": "B",
+      "event_type": "COMPLETED",
+      "result": "PASS",
+      "note": "Sentetik vitrin senaryosu: montaj tamamlandı, iki bağlantı elemanı DEMO-ANA kaynağından sarf edildi.",
+      "created_at": "2026-10-23 13:40:55.945481"
+    },
+    {
+      "code": "C",
+      "event_type": "STARTED",
+      "result": "",
+      "note": "",
+      "created_at": "2026-10-23 13:41:08.878613"
+    },
+    {
+      "code": "C",
+      "event_type": "COMPLETED",
+      "result": "FAIL",
+      "note": "Sentetik kalite denemesi: 27 V tolerans dışı; kalite kapısının ilerlemeyi durdurması bekleniyor. [GİRDİ SÖZLEŞMESİ: Besleme Gerilimi: 27 V maksimum 24.500000000000 üstünde.]",
+      "created_at": "2026-10-23 13:41:24.464798"
+    }
+  ],
+  "material_issue": [
+    {
+      "code": "DEMO-MAT-001",
+      "quantity_delta": -2,
+      "source": "PRODUCTION",
+      "reference": "Üretim Tüketimi: DEMO-100-2026-00001 (B)",
+      "lot_number": "",
+      "serial_number": "",
+      "created_at": "2026-10-23 13:40:55.972346",
+      "location": "DEMO-ANA"
+    }
+  ],
+  "genealogy": [
+    {
+      "step": "B",
+      "material": "DEMO-MAT-001",
+      "quantity": 2,
+      "unit": "adet",
+      "component_serial_or_lot": "",
+      "voided_at": null,
+      "created_at": "2026-10-23 13:40:55.972346"
+    }
+  ],
+  "inspection_contract": [
+    {
+      "key": "voltage_v",
+      "label": "Besleme Gerilimi",
+      "input_type": "NUMBER_DECIMAL",
+      "unit": "V",
+      "min_value": 23.5,
+      "max_value": 24.5,
+      "required": 1
+    },
+    {
+      "key": "current_ma",
+      "label": "Standby Akımı",
+      "input_type": "NUMBER_DECIMAL",
+      "unit": "mA",
+      "min_value": 45,
+      "max_value": 65,
+      "required": 1
+    }
+  ]
+}

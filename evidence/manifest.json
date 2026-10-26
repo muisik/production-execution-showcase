@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "algorithm": "SHA-256",
+  "note": "Complete public payload excluding this manifest itself. Hashes prove byte consistency, not independent certification.",
+  "files": {
+    ".gitattributes": "2686f65dc3de8d304c8b88081c6b4b44a299b408833875ea54dd8f2c27809fb0",
+    ".gitignore": "2bdfdb216230559f36faf46907142b8afd478401150f810e1ddaf9a4fdcc656c",
+    "evidence/production-state.json": "ccfcc075357195dc2138e81fc577ff677384e0b53296b5f419373ab5aca3502e",
+    "evidence/verification-output.txt": "90044052df0a8825a08ffbd55d2d5ce01af432769f8df4e5c629d59dae503be4",
+    "evidence/verification.json": "5975f4d57eef9c7480f8d366344e4bcd7592d9d95a62a811cfe5c6053935b897",
+    "evidence/walkthrough.json": "40744a7e4ece7cfe591d4fec39e3ca1a761c66770e7ad458af989f206fbd9554",
+    "README.md": "6235ab6120c12ed92c1e25b87738f52fe65c38466de4650d96cae0f0c7cc68bd",
+    "screenshots/01-management.jpg": "b4a545eba69a1de9dd1597e2b8c5a81852cb4e978edcf3ff72c5f495f98f0f0e",
+    "screenshots/02-process.jpg": "9307f2b5856e3da7577886af7eb47bde0c871f16c54d76bf871305a1c9e216ea",
+    "screenshots/03-operator-task.jpg": "c207bb802177439ee53ce2b8ac760af7cf12806d308d2abbce4f19c63f975a94",
+    "screenshots/04-quality-gate.jpg": "4932c99999c36d1bc8ebb6e9d87e99cc9f7bb5efa57848199edeb81414225eb7",
+    "screenshots/05-execution-history.jpg": "606552683cf1457f0a936e7559873eed7fb70ad851e2295b59e0a9316b8516ae",
+    "screenshots/06-quality-passport.jpg": "538f010203a735fa76e3e75203522e25322ffe474e3e5f765d6831ffd3d6ea35",
+    "screenshots/production-execution-tour.gif": "c4b9c4b1a2455bc720024be7be2480d5cca1c5da97e0e82b4b3c0cffcba3a50c"
+  }
+}
